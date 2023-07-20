@@ -1,6 +1,6 @@
 {
-  "name": "@dodidharma/next-page-props",
-  "version": "1.0.1",
+  "name": "next-page-props",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
