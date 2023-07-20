@@ -1,0 +1,32 @@
+{
+  "name": "@dodidharma/next-page-props",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "yarn clean",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:esm": "tsc --module es2015 --outDir dist/esm",
+    "build": "yarn build:cjs && yarn build:esm"
+  },
+  "keywords": [],
+  "author": "Dodi Aditya",
+  "license": "ISC",
+  "resolutions": {
+    "@types/react": "17.0.30"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "next": "11.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "typescript": "^5.1.6"
+  }
+}
