@@ -5,11 +5,11 @@ Simple NPM package to get current page props from nested page component
 ## Installation
 
 ```
-npm install @dodidharma/next-page-props
+npm install next-page-props
 
 // or
 
-yarn add @dodidharma/next-page-props
+yarn add next-page-props
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ Import the `withPageProps` hoc in app and wrap the `App` component
 
 ```
 import { AppProps } from "next"
-import { withPageProps } from "@dodidharma/next-page-props";
+import { withPageProps } from "next-page-props";
 
 const App = ({ Component, pageProps }: AppProps) => {
     return <Component {...pageProps}>
@@ -31,11 +31,11 @@ export default withPageProps(App);
 
 ### Per Page Usage
 
-Import the `withPageProps` hoc in app and wrap Page component
+Import the `withPageProps` hoc in page and wrap Page component
 
 ```
-import { NextPage } from "next";
-import { withPageProps } from "@dodidharma/next-page-props";
+import { NextPage, GetServerSideProps } from "next";
+import { withPageProps } from "next-page-props";
 
 export type HomeProps = {
     hello: string;
@@ -63,7 +63,7 @@ export default withPageProps(HomePage);
 In the component import `usePageProps` hooks. Make sure this component is called in home page.
 
 ```
-import { usePageProps } from "@dodidharma/next-page-props";
+import { usePageProps } from "next-page-props";
 import { HomeProps } from "@/pages";
 
 const Example = () => {
